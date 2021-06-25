@@ -2,19 +2,25 @@ import React from 'react'
 import './App.css';
 import { useState, useEffect } from 'react';
 import classNames from 'classnames';
+const isMobile = () => {
+    const ua = navigator.userAgent;
+    return /Android|Mobi/i.test(ua);
+};
 
 export const Cursor = () => {
-  const [position, setPosition] = useState({x: 0, y: 0});
-  const [clicked, setClicked] = useState(false);
-  const [hidden, setHidden] = useState(false);
-  const [linkHovered, setLinkHovered] = useState(false);
-
-   useEffect(() => {
-       addEventListeners();
-       handleLinkHoverEvents();
-       return () => removeEventListeners();
-   }, []);
+    const [position, setPosition] = useState({x: 0, y: 0});
+    const [clicked, setClicked] = useState(false);
+    const [hidden, setHidden] = useState(false);
+    const [linkHovered, setLinkHovered] = useState(false);
+    
+    useEffect(() => {
+        addEventListeners();
+        handleLinkHoverEvents();
+        return () => removeEventListeners();
+    }, []);
+    if (typeof navigator !== 'undefined' && isMobile()) return null;
    
+
    const addEventListeners = () => {
        document.addEventListener("mousemove", onMouseMove);
        document.addEventListener("mousedown", onMouseDown);
