@@ -13,7 +13,7 @@ ReactDOM.render(
   <>
     
     <Router>
-    <Cursor/>
+    <Cursor />
     <App />
     <Background/>
       <Switch>

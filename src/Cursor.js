@@ -18,7 +18,6 @@ export const Cursor = () => {
         handleLinkHoverEvents();
         return () => removeEventListeners();
     }, []);
-    if (typeof navigator !== 'undefined' && isMobile()) return null;
    
 
    const addEventListeners = () => {
@@ -36,6 +35,7 @@ export const Cursor = () => {
         document.removeEventListener("mouseenter", onMouseEnter);
        document.removeEventListener("mouseleave", onMouseLeave);
    };
+   
    const handleLinkHoverEvents = () => {
            document.querySelectorAll("a").forEach(el => {
                el.addEventListener("mouseover", () => setLinkHovered(true));
@@ -69,7 +69,7 @@ export const Cursor = () => {
    const onMouseMove = (e) => {
        setPosition({x: e.clientX, y: e.clientY});
    };          
-                            
+   if (typeof navigator !== 'undefined' && isMobile()) return null;                      
   return (
     
     <div className={cursorClasses}
