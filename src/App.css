@@ -1,0 +1,58 @@
+
+.navbar-nav {
+    margin-left: auto;
+}
+body{
+    background-color: #343a40;
+    font-family: 'Open Sans', sans-serif;
+    cursor: none;
+    
+}
+.lol{
+    color: aliceblue;
+    justify-content: center;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-30%);
+    font-size: 3.5rem;
+    z-index: -1;
+    margin: 10px;
+    padding: 10px;
+}
+.fltr{
+    filter: invert(100%);
+}
+.tsparticles-canvas-el{
+    width: 100vw !important;
+    height: 100vh !important;
+}
+
+/* Cursor Css */
+
+.cursor{
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 2px solid white;
+    border-radius: 50%;
+    position: fixed;
+    transform: translate(-50%,-50%);
+    z-index: 999;
+    pointer-events: none;
+    mix-blend-mode: difference;
+    transition-property:  opacity, background-color, transform, mix-blend-mode;
+    transition: all 150ms ease;
+    transition-property: opacity;
+}
+ .cursor--clicked {
+       transform: translate(-50%, -50%) scale(0.9);
+       background-color: #fefefe;
+}
+.cursor--hidden {
+       opacity: 0;
+     }
+.cursor--link-hovered {
+  transform: translate(-50%, -50%) scale(1.5);   background-color: #fefefe; 
+  transition-duration: 1s;
+}  
+    
