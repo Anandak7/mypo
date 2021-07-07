@@ -42,7 +42,7 @@ export const About = () => {
                     studying B.Tech at Mar Baselios College of Engineering and 
                     Technology, Trivandrum. I have good communication skills, enabling me to effectively communicate with a wide range of people. I am a detail-oriented person and can juggle between tasks.
                     I am more interested in Front end development. I realised that the field quite excites me.
-                    Passionate about implementing new projects. I made this website using React, Bootstrap and other Javascript frameworks.
+                    Passionate about implementing new projects. I made this website using React, Bootstrap and other Javascript libraries.
                     I am looking for an internship in the industry where I can put my knowledge into practice ultimately enhancing my skills and experience.
                     </Fade>
                     </div>
